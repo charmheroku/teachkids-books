@@ -4,8 +4,8 @@ Try it https://teach-kids.herokuapp.com/
 
 Website for uploading and downloading children's literature:
 
--Custom admin panel (django-constance)
--Custom flat pages
--Built-in text editor (django-ckeditor)
--Contact form
--and etc
+1. Custom admin panel (django-constance)
+2. Custom flat pages
+3. Built-in text editor (django-ckeditor)
+4. Contact form
+5. -and etc
