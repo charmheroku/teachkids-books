@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ flatpage.title }}{% endblock title %}
+
+{% block maincontent %}
+<!-- top-header -->
+<div class="bloc bg-top-banners-bg-03 hed-cont-height l-bloc" id="top-header">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-12">
+          <h2 class="mg-md text-lg-center banner-title">{{ flatpage.title }}</h2>
+        </div>
+        <div class="col-lg-8 offset-lg-2 col-10 offset-1 bloc-top-header-margin-top col-sm-6 offset-sm-3"><img src=""  {% if flatpage.customflatepage.cover %} data-src="{{flatpage.customflatepage.cover.url}}"  alt="{{ flatpage.title }}" {% endif %} class="img-fluid mx-auto d-block banner-image lazyload"/> </div>
+    </div>
+      </div>
+    </div>
+</div>
+<!-- top-header END -->
+
+ <!-- bloc-135 -->
+ <div class="bloc l-bloc" id="bloc-135">
+    <div class="container bloc-lg">
+      <div class="row">
+        <div class="col">
+          <div> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- bloc-135 END --> 
+  
+<!-- bloc-136 -->
+<div class="bloc bg-repeat l-bloc" id="bloc-136">
+    <div class="container bloc-md">
+      <div class="row align-items-center row-copyright-margin-top">
+        <div class="col-md-6"> <img src="img/lazyload-ph.png" data-src="{% static 'img/copyright-02-02.jpg' %}" class="img-fluid mx-auto d-block img-style lazyload" alt="copyright-sign" /> </div>
+        <div class="align-self-center col-md-6">
+          <h3 class="mg-lg mid-section-title"> <strong>What about copyright?</strong> </h3>
+          <p class="p-style"> <strong>All rights of the materials on the TeachKids.eu website are reserved.</strong><br>
+            <br>
+            All resources on this website may be reproduced for personal, ministry, nonprofit, or non-commercial uses only. This material is provided free of charge, to be used for teaching and studying. Under no circumstances shall this material be sold in any form. No charges of any kind may be added, including shipping or handling. No material from the TeachKids.eu website may be bundled with anything sold, or used to solicit donations.<br>
+            <br>
+            <strong>The full copyright notice must remain intact on all materials.<br>
+            </strong><br>
+            For free distribution of over 10 copies of any material, the distributor must obtain written permission from Teach Kids. Please submit permission request by email.<br>
+            <br>
+            We encourage others to place a link to the home page of TeachKids.eu on their web platform, but we do not grant permission to post Teach Kids resources or a direct link to our downloads on non-CEF web platforms, unless written permission of TeachKids.eu / CEF Europe has been given.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- bloc-136 END --> 
+
+{% endblock maincontent %}

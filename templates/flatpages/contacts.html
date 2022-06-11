@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{ flatepage.title }}{% endblock title %}
+
+{% block maincontent %}
+<!-- top-header -->
+
+<div class="bloc full-width-bloc bg-top-banners-bg-03 tc-white hed-cont-height l-bloc" id="header">
+    <div class="container ">
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-lg-8 offset-lg-2 col-sm-12">
+          <h1 class="mg-md text-lg-center banner-title"> <strong>{{ flatepage.title }}</strong> </h1>
+        </div>
+        <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3"> 
+            <img src=""  {% if flatepage.customflatepage.cover %} data-src="{{flatepage.customflatepage.cover.url}}"  alt="{{ flatepage.title }}" {% endif %} class="img-fluid mx-auto d-block banner-image img-contact--style lazyload"> </div>
+      </div>
+    </div>
+  </div>
+
+<!-- like-to-hear -->
+<div class="bloc l-bloc" id="like-to-hear">
+    <div class="container bloc-md">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <h5 class="text-lg-center banner-subtitle"> {{ flatepage.content|safe }}</h5>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- like-to-hear END --> 
+
+<!-- bloc-7 -->
+<div class="bloc l-bloc" id="bloc-7">
+    <div class="container bloc-lg">
+        {% include "partials/messages.html" %}
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 offset-md-2 col-md-8">
+            <form method='post'>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="bloc-button btn btn-d btn-lg btn-block text-button" type="submit"> Submit </button>
+            </form> 
+        </div>
+      </div>
+    </div>
+</div>
+<!-- bloc-7 END --> 
+
+
+{% endblock maincontent %}

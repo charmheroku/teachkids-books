@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ flatpage.title }}{% endblock title %}
+
+{% block maincontent %}
+
+<!-- top-header -->
+<div class="bloc bg-top-banners-bg-03 hed-cont-height l-bloc" id="top-header">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-12">
+          <h2 class="mg-md text-lg-center banner-title">{{ flatpage.title }}</h2>
+        </div>
+        <div class="col-lg-8 offset-lg-2 col-10 offset-1 bloc-top-header-margin-top col-sm-6 offset-sm-3"><img src=""  {% if flatpage.customflatepage.cover %} data-src="{{flatpage.customflatepage.cover.url}}"  alt="{{ flatpage.title }}" {% endif %} class="img-fluid mx-auto d-block banner-image lazyload"/> </div>
+    </div>
+      </div>
+    </div>
+</div>
+<!-- top-header END --> 
+  
+<!-- about-tk -->
+<div class="bloc l-bloc" id="about-tk">
+    <div class="container bloc-lg">
+      <div class="row">
+        <div class="offset-lg-0 col-lg-8 col-10 offset-1 col-md-10 align-self-center">
+          <p class="p-style btn-resize-mode">
+            {{ flatpage.content }} 
+          </p>
+        </div>
+        <div class="align-self-center col-10 offset-1 col-md-8 offset-md-2 order-md-0 col-lg-4 offset-lg-0"> <img src="" data-src="{% static 'img/JESUS-care-for-people-LessonText.jpg' %}" class="img-fluid mx-auto d-block lazyload" alt="JESUS care-for-people-LessonText" /> </div>
+      </div>
+    </div>
+</div>
+<!-- about-tk END --> 
+  
+<!-- why-cef-resources-title -->
+<div class="bloc why-cef-resources-title l-bloc none full-width-bloc" id="why-cef-resources-title">
+    <div class="container ">
+      <div class="row">
+        <div class="col">
+          <h2 class="mg-md section-title text-lg-center"> Why use <i>CEF</i> resources? </h2>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- why-cef-resources-title END --> 
+  
+<!-- gospel-emplained -->
+<div class="bloc none bgc-white-2 l-bloc full-width-bloc" id="gospel-emplained">
+    <div class="container ">
+      <div class="row no-gutters">
+        <div class="col-lg-6 align-self-end order-md-1 order-lg-0"> <img src="" data-src="{% static 'img/boy-reading-1000x1000.jpg' %}" class="img-fluid mx-auto d-block image-card-boy lazyload" alt="sanfran" /> </div>
+        <div class="col-lg-6 text-column-gb-rdyellow d-flex">
+          <div class="card card-sq text-card">
+            <div class="card-body">
+              <h2 class="mg-md card-title"> The Gospel </h2>
+              <p> Every <i>CEF</i> product clearly explains the Gospel on a child&rsquo;s level. Because we are intentional about evangelism, teaching of biblical truths is woven through every part of our curriculum - the memory verse, songs, missionary story and even the games! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- gospel-emplained END --> 
+  
+<!-- aplication-gods-word-mobile -->
+<div class="bloc none full-width-bloc bgc-white-2 d-lg-none d-xl-none d-flex l-bloc" id="aplication-gods-word-mobile">
+    <div class="container ">
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-column-gb-blue d-flex order-lg-1">
+          <div class="card card-sq text-card">
+            <div class="card-body">
+              <h2 class="mg-md card-title"> Application </h2>
+              <p> The application of God&rsquo;s Word to the life of a child is an essential element of each Bible lesson. Unsaved children hear of their need for a Saviour and saved children are presented a spiritual growth challenge. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-end"> <img src="" data-src="{% static 'img/children-reading-1000x1000.jpg' %}" class="img-fluid mx-auto d-block image-card-kids lazyload" alt="sanfran" /> </div>
+      </div>
+    </div>
+</div>
+<!-- aplication-gods-word-mobile END --> 
+  
+<!-- aplication-gods-word -->
+<div class="bloc none full-width-bloc bgc-white-2 d-lg-flex   d-none l-bloc" id="aplication-gods-word">
+    <div class="container ">
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-column-gb-blue d-flex">
+          <div class="card card-sq text-card">
+            <div class="card-body">
+              <h2 class="mg-md card-title"> Application </h2>
+              <p> The application of God&rsquo;s Word to the life of a child is an essential element of each Bible lesson. Unsaved children hear of their need for a Saviour and saved children are presented a spiritual growth challenge. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-end"> <img src="" data-src="{% static 'img/children-reading-1000x1000.jpg' %}" class="img-fluid mx-auto d-block image-card-kids lazyload" alt="sanfran" /> </div>
+      </div>
+    </div>
+</div>
+<!-- aplication-gods-word END --> 
+  
+<!-- bible-central-part -->
+<div class="bloc none full-width-bloc bgc-white-2 l-bloc" id="bible-central-part">
+    <div class="container ">
+      <div class="row no-gutters">
+        <div class="col-lg-6 align-self-start"> <img src="" data-src="{% static 'img/bible-1000x1000px.jpg' %}" class="img-fluid mx-auto d-block image-card-boy lazyload" alt="sanfran" /> </div>
+        <div class="col-lg-6 d-flex text-column-gb-brown">
+          <div class="card card-sq text-card">
+            <div class="card-body">
+              <h2 class="mg-md card-title"> The Bible </h2>
+              <p> The Bible is central to <i>CEF</i> teaching methods. A <i>CEF</i> trained teacher, using the&nbsp;<i>CEF</i> curriculum will have the Scripture open and at the centre of each teaching time. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- bible-central-part END -->
+
+{% endblock maincontent %}

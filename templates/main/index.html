@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load flatpages %}
+
+
+{% block title %}Home{% endblock title %}
+
+
+
+{% block maincontent %}
+{% get_flatpages '/about/teachkids/' as about_teachkids %}
+
+{% include "partials/top-header.html" %}
+
+  <!-- about-tk -->
+  <div class="bloc bgc-white b-parallax l-bloc" id="about-tk">
+    <div class="container bloc-lg">
+      <div class="row">
+        <div class="col-sm-10 offset-sm-1 offset-lg-0 col-lg-6 order-lg-0 col-md-10 offset-md-1 col-10 offset-1"> <img src="{% static 'img/lazyload-ph.png' %}" data-src="{% static 'img/gril-read.jpg' %}" class="img-fluid float-lg-none lazyload" alt="gril read" /> </div>
+        <div class="align-self-center col-sm-10 offset-sm-1 order-0 col-lg-6 offset-lg-0 col-10 offset-1 col-md-10 offset-md-1">
+          {% for page in about_teachkids %}
+          <h3 class="mg-lg mid-section-title "> <strong>{{page.title}}</strong> </h3>
+          <p class="mg-lg p-style">{{page.content|safe}}</p>
+          <a href="{{page.url}}" class="btn btn-d btn-lg btn-block text-button">READ MORE</a> </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- about-tk END --> 
+  
+  <!-- literature-advantages -->
+  <div class="bloc none bloc-bg-texture texture-geometry-shapes bgc-white b-parallax l-bloc" id="literature-advantages">
+    <div class="container bloc-xl">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-lg-center text-sm-center mg-lg section-title "> Advantages of <i>CEF</i> Literature<br>
+          </h2>
+        </div>
+      </div>
+      <div class="row voffset-md">
+        <div class="align-self-center col-lg-4 order-lg-0 col-md-8 order-md-0 offset-md-2 col-sm-8 offset-sm-2 col-10 offset-1 offset-lg-0">
+          <div class="row voffset">
+            <div class="col-lg-12">
+              <h4 class="mg-sm text-lg-right"> High Quality </h4>
+              <p class="text-lg-right p-style"> <i>CEF</i> lessons are prepared and checked by an international team, thus ensuring high quality content without compromising the message of God&rsquo;s Word. </p>
+            </div>
+            <div class="col-lg-12">
+              <h4 class="mg-sm text-lg-right"> Easy to Use </h4>
+              <p class="text-lg-right"> A “sample” of each lesson is included, together with ideas to strengthen the teaching throughout the whole programme. </p>
+            </div>
+            <div class="col-lg-12">
+              <h4 class="mg-sm text-lg-right"> Adaptable </h4>
+              <p class="text-lg-right"> As each teaching situation is different, the lessons can be adapted to suit your needs, whether you are teaching a small group of children meeting in a home or a large group meeting in a church building or in a school. </p>
+            </div>
+          </div>
+        </div>
+        <div class="order-lg-0 order-md-0 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-10 offset-1 offset-lg-0 col-lg-4 align-self-center"> <img src="{% static 'img/lazyload-ph.png' %}" data-src="{% static 'img/cef-literature.png' %}" class="img-fluid d-block mg-lg img-margin-right lazyload" alt="JESUS care-for-people-LessonText" /> </div>
+        <div class="align-self-center col-lg-4 order-md-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-10 offset-1 offset-lg-0">
+          <div class="row voffset">
+            <div class="col-lg-12">
+              <h4 class="text-lg-left mg-sm"> Gospel-centred </h4>
+              <p class="text-lg-left"> The Word of God is central to all <i>CEF</i> materials. The Gospel message is clearly presented in each series of Bible lessons. </p>
+            </div>
+            <div class="col-lg-12">
+              <h4 class="text-lg-left mg-sm"> Relevant to Today&rsquo;s Child </h4>
+              <p class="text-lg-left"> It is important for children to learn how to apply God&rsquo;s Word to their lives. Examples of everyday situations are included in the lessons to encourage children to think about how they should react if they are obeying God&rsquo;s Word. </p>
+            </div>
+            <div class="col-lg-12">
+              <h4 class="text-lg-left mg-sm"> Easy to Understand </h4>
+              <p class="text-lg-left"> Lessons include activities to help children to understand the truths included in the Bible story. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- literature-advantages END --> 
+    
+  <!-- ScrollToTop Button --> 
+  <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><span class="fa fa-chevron-up"></span></a> 
+  <!-- ScrollToTop Button END--> 
+    
+{% endblock maincontent %}
+    

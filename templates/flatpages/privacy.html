@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ flatpage.title }}{% endblock title %}
+
+{% block maincontent %}
+<!-- top-header -->
+<div class="bloc bg-top-banners-bg-03 hed-cont-height l-bloc" id="top-header">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-12">
+          <h2 class="mg-md text-lg-center banner-title">{{ flatpage.title }}</h2>
+        </div>
+        <div class="col-lg-8 offset-lg-2 col-10 offset-1 bloc-top-header-margin-top col-sm-6 offset-sm-3"> 
+        
+            <img src=""  {% if flatpage.customflatepage.cover %} data-src="{{flatpage.customflatepage.cover.url}}"  alt="{{ flatpage.title }}" {% endif %} class="img-fluid mx-auto d-block banner-image lazyload"/> </div>
+        
+      </div>
+    </div>
+</div>
+
+<!-- loc-info-text -->
+<div class="bloc l-bloc" id="loc-info-text">
+    <div class="container bloc-md">
+      <div class="row">
+        <div class="col">
+          <div >
+            <p class="p-style">{{ flatpage.content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- loc-info-text END --> 
+{% endblock maincontent %}

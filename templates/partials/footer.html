@@ -1,0 +1,51 @@
+{% load tags %}
+
+<!-- footer -->
+<div class="bloc full-width-bloc b-divider bgc-oxford-blue d-bloc" id="footer">
+    <div class="container bloc-sm">
+      <div class="row">
+        <div class="col" id="privacy-policy">
+ 
+          <div class="row align-items-center no-gutters row-margin-top">
+            <div class="col-lg-3">
+              <div> </div>
+            </div>
+  
+
+          {% if config.FACEBOOK %}
+            <div class="col-lg-2 col-8 offset-2 offset-lg-0">
+              <div>
+                <div class="text-center"> <a href="{{config.FACEBOOK}}" target="_blank"><span class="fa fa-facebook-square none social-icon icon-md"></span></a> </div>
+              </div>
+            </div>
+          {% endif %}
+          {% if config.INSTAGRAM  %}
+            <div class="col-lg-2 col-8 offset-2 offset-lg-0">
+              <div>
+                <div class="text-center"> <a href="{{config.INSTAGRAM}}" rel="nofollow noopener noreferrer" target="_blank"><span class="ion ion-social-instagram-outline icon-md social-icon"></span></a> </div>
+              </div>
+            </div>
+          {% endif %}
+          {% if config.E_MAIL %}
+            <div class="col-lg-2 col-8 offset-2 offset-lg-0">
+              <div>
+                <div class="text-center"> <!-- This script can be used FREELY as long as this copyright message is intact: Mail Spam Blocker / Copyright (c) 2004 by www.myvasco.com Internet Marketing Solutions --> 
+                  <a href="{{config.E_MAIL}}"><span class="ion ion-android-mail icon-md social-icon"></span></a> </div>
+              </div>
+            </div>
+          {% endif %}
+
+            <div class="col-lg-3">
+              <div> </div>
+            </div>
+          </div>
+          <div class="divider-h"> <span class="divider divider-half"></span> </div>
+          <h6 class="mg-md privacy-policy"> <a class="privacy-policy" href="/about/privacy">PRIVACY POLICY</a><br>
+          </h6>
+          <p class="copyright-footer"> © <script type="text/javascript">document.write(new Date().getFullYear())</script> Child Evangelism Fellowship – EUROPE is charity registered in Switzerland. | To contact TeachKids, send us an email:&nbsp;<!-- This script can be used FREELY as long as this copyright message is intact: Mail Spam Blocker / Copyright (c) 2004 by www.myvasco.com Internet Marketing Solutions --> 
+            <a class="a-maillink-footer" a href="&#x6d;ailt&#111;&#x3a;&#x69;&#x6e;&#x66;&#x6f;@&#x74;&#101;&#x61;&#x63;&#104;&#x6b;&#105;ds&#x2e;&#101;&#117;">&#x69;n&#x66;&#x6f;@&#116;ea&#x63;&#104;&#x6b;&#105;&#x64;&#x73;&#46;&#101;&#x75;</a> </p>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- footer END -->  

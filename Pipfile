@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+
+[packages]
+django = "*"
+django-dotenv = "*"
+django-ckeditor = "==6.1.0"
+pillow = "*"
+django-bootstrap4 = "*"
+django-crispy-forms = "*"
+django-constance = {extras = ["database"], version = "*"}
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

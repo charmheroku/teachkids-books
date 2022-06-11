@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load tags %}
+{% load static %}
+
+{% block title %}{{books_category.name}}{% endblock title %}
+
+{% block maincontent %}
+
+  <!-- top-header -->
+  <div class="bloc bg-top-banners-bg-03 l-bloc" id="top-header">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-12">
+          <h2 class="mg-md text-lg-center banner-title"> {{books_category.name}} </h2>
+          <h4 class="text-lg-center text-center banner-subtitle"> {{books_category.text|safe}}<br>
+          </h4>
+        </div>
+        <div class="col-lg-8 offset-lg-2 col-sm-10 offset-sm-1 col-10 offset-1"> <img src="{{books_category.cover.url}}" data-src="{{books_category.cover.url}}" class="img-fluid mx-auto d-block banner-image lazyload" alt="children learning-verse" /> </div>
+      </div>
+    </div>
+  </div>
+  <!-- top-header END --> 
+
+   <!-- emty-section -->
+   <div class="bloc l-bloc" id="emty-section">
+    <div class="container bloc-lg">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <div> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- emty-section END --> 
+    
+      
+  <!-- saviour-foryou -->
+  {% for book in books_category|filter_books %}
+    <div class="bloc l-bloc" id="saviour-foryou">
+        <div class="container bloc-md">
+            <div class="row">
+                <div class="align-self-center col-md-6 offset-md-0"> <img src="" data-src="{{book.cover.url}}" class="img-fluid mx-auto d-block lazyload" alt="Corrie_ten_Boom" />
+                </div>
+                <div class="align-self-center offset-md-0 col-md-6">
+                    <h2 class="resources-title mg-sm"> {{book.title}} 
+                    </h2>
+                    <p class="mg-lg p-style">{{book.text|safe}}</p>
+                    <div class="row">
+
+                {% for file in book.book_files.all|dictsort:"format_book" %}
+                    {% if file.format_book == '1' %}
+                         <div class="offset-sm-0 col-sm-6 offset-0 col-lg-7 col-7"> <a href="{{file.file.url}}" class="btn btn-d btn-lg btn-block text-button" target="_blank">{{file.get_format_book_display}}</a> </div>
+                    {% else %}
+                         <div class="offset-sm-0 col-sm-6 offset-0 col-lg-5 col-5"> <a href="{{file.file.url}}" class="btn btn-d btn-lg btn-block outline-button" target="_blank">{{file.get_format_book_display}}</a> </div>
+                    {% endif %}
+                {% endfor %}
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  {% endfor %}
+  <!-- saviour-foryou END --> 
+  
+    
+{% endblock maincontent %}
