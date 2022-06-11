@@ -2,7 +2,7 @@
 Django teachkids project
 Try it https://teach-kids.herokuapp.com/
 
-Website for downloading and downloading children's literature:
+Website for uploading and downloading children's literature:
 
 -Custom admin panel (django-constance)
 -Custom flat pages
